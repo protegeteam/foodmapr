@@ -11,8 +11,10 @@ License :: OSI Approved :: GNU General Public License (GPL)
 Intended Audience :: Science/Research
 Topic :: Scientific/Engineering
 Topic :: Scientific/Engineering :: Bio-Informatics
-Programming Language :: Python :: 2.7
-Programming Language :: Python :: 3.6
+Programming Language :: Python :: 3.7
+Programming Language :: Python :: 3.8
+Programming Language :: Python :: 3.9
+Programming Language :: Python :: 3.10
 Operating System :: POSIX :: Linux
 """.strip().split('\n')
 
@@ -25,11 +27,12 @@ setup(name='foodmapr',
       license='GPL-3.0',
       classifiers=classifiers,
       install_requires=[
-          'nltk==3.6.2',
-          'inflection==0.5.1',
-          'rdflib==5.0.0',
+          'inflection~=0.5',
+          'nltk~=3.7',
+          'python-dateutil~=2.8',
+          'rdflib~=6.1',
       ],
-      python_requires='>=3.5, <3.9',
+      python_requires='>=3.7, <3.11',
       test_suite='nose.collector',
       tests_require=['nose'],
       packages=find_packages(),

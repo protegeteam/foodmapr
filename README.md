@@ -112,3 +112,28 @@ What are the differences:
    }
    ```
 
+## Docker
+
+Foodmapr can be easily be run in a Docker container
+1. Prepare the `input.csv` and `config_foodon.json` as above in
+[Usage](#Usage)
+
+2. After cloning the respository:
+```bash
+cd /path/to/foodmapr
+```
+
+3. Build the container:
+```bash
+docker build . -t foodmapr:latest
+```
+
+4. Run foodmapr, taking care to mount your volume inside the container:  
+```bash
+docker run \
+  -v /path/to/local/data-config:/run-data \
+  foodmapr:latest \
+    /run-data/input.csv \
+    -c /run-data/config_foodon.json \
+    -o /run-data/output.json
+```
