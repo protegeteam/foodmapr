@@ -14,6 +14,8 @@ What are the differences:
 
 ## Installation
 
+Requirement: Python 3.7 and above
+
 1. Install [Conda](https://docs.conda.io/en/latest/miniconda.html).
 
 2. Create a FoodMapr environment
